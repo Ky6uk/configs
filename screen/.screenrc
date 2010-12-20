@@ -1,0 +1,17 @@
+# bind F1 and F2 to previous and next screen window
+# bind F3 to create new window
+bindkey -k k1 prev
+bindkey -k k2 next
+bindkey -k k3 screen
+
+# disable startup message
+startup_message off
+
+# window list at the bottom
+hardstatus alwayslastline
+hardstatus string "%-w%{= BW}%50>%n %t%{-}%+w%<"
+
+# From Stephen Shirley
+# Don't block command output if the terminal stops responding
+# (like if the ssh connection times out for example).
+nonblock on
