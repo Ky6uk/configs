@@ -1,0 +1,19 @@
+[web]
+	browser = chromium-browser
+
+[color]
+	diff = always
+	branch = always
+	status = always
+
+[core]
+	compression = 9
+	editor = vim
+	quotepath = false
+
+[user]
+	name = Roman (Ky6uk) Nuritdinov
+	email = ky6uk.kun@gmail.com
+
+[merge]
+	tool = meld
