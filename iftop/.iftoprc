@@ -1,0 +1,5 @@
+dns-resolution: yes
+port-resolution: yes
+# filter-code: not host 192.168.200.2
+sort: 40s
+line-display: one-line-both
