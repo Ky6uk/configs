@@ -1,0 +1,6 @@
+For better use color scheme "xoria256" add in ~/.bashrc
+
+export EDITOR=vim
+if [ $TERM = "xterm" ]; then
+	export TERM=xterm-256color
+fi
