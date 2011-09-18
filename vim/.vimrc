@@ -34,4 +34,7 @@ highlight lCursor guifg=NONE guibg=Cyan
 
 set paste
 
+" показывать номера линий
+set number
+
 syntax on
