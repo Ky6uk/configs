@@ -4,3 +4,8 @@ export EDITOR=vim
 if [ $TERM = "xterm" ]; then
 	export TERM=xterm-256color
 fi
+
+VIM:
+    - update plugins:
+        ./vim-update-scripts.py watch-list
+            # just add "script id" in watch-list for install new one
