@@ -1,0 +1,11 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/Dawn.tmTheme",
+	"drawWhiteSpace": "none",
+	"font_size": 10,
+	"tab_size": 4,
+	//"theme": "Soda Light.sublime-theme", // uncomment after install theme "Soda"
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"use_tab_stops": true,
+	"wantVerticalScrollBar": false
+}
