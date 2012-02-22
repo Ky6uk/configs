@@ -26,7 +26,7 @@ Plugins updater
 Sublime Text 2
 ==============
 
-**Version for:** beta, build 2180
+**Version for:** beta, build 2180  
 [Packages manager official instruction](http://wbond.net/sublime_packages/package_control/installation).
 
 Local Directory
