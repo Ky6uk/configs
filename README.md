@@ -26,8 +26,17 @@ Plugins updater
 Sublime Text 2
 ==============
 
-**Version for:** beta, build 2180  
+**Version for:** beta, build 2220  
 [Packages manager official instruction](http://wbond.net/sublime_packages/package_control/installation).
+
+Some Useful Package
+-------------------
+* Backbone.js
+* Emmet
+* jQuery
+* Theme - Soda
+* SublimeDancer
+
 
 Local Directory
 ---------------
