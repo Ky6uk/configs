@@ -26,7 +26,7 @@ Plugins updater
 Sublime Text 2
 ==============
 
-**Version for:** beta, build 2220  
+**Version for:** beta, build 2220
 [Packages manager official instruction](http://wbond.net/sublime_packages/package_control/installation).
 
 Some Useful Package
@@ -44,3 +44,8 @@ Local Directory
 **Linux:**
 
     ~/.config/sublime-text-2/
+
+Awesome WM
+==========
+
+config dir: ~/.config/awesome
