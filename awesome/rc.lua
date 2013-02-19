@@ -401,7 +401,8 @@ run_once("xscreensaver","-no-splash")
 -- {{{ Custom keys
 globalkeys = awful.util.table.join(
     globalkeys,
-    awful.key({ "Mod1", "Control" }, "l", function () awful.util.spawn("xscreensaver-command -lock") end)
+    awful.key({ "Mod1", "Control" }, "l", function () awful.util.spawn("xscreensaver-command -lock") end),
+    awful.key({}, "Print", function () awful.util.spawn("ksnapshot") end)
 )
 -- }}}
 
