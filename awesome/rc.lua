@@ -391,11 +391,13 @@ function run_once(prg,arg_string,pname,screen)
     end
 end
 
+run_once("kded4") -- qdbus dependency
 run_once("kmix")
 run_once("psi-plus")
 run_once("google-chrome",nil,"/opt/google/chrome/chrome")
 run_once("tilda")
 run_once("xscreensaver","-no-splash")
+awful.util.spawn_with_shell("qdbus org.kde.kded /kded loadModule keyboard") -- libqt4-dev should me installed?
 -- }}}
 
 -- {{{ Custom keys
