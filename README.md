@@ -36,6 +36,10 @@ Some Useful Package
 * jQuery
 * Theme - Soda
 * SublimeDancer
+* CSSComb
+* JsFormat
+* JS Minifier
+* LiveReload
 
 
 Local Directory
