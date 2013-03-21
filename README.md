@@ -59,3 +59,4 @@ Third party
 * kbdd
 * xscreensaver
 * ksnapshot
+* qtchooser (qdbus provider)

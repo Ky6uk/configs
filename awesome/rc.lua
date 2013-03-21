@@ -81,9 +81,23 @@ end
 -- {{{ kbdd widget
 kbd_img_path = awful.util.getdir("config") .. "/icons/"
 
+kbd_dbus_sw_cmd = "qdbus ru.gentoo.KbddService /ru/gentoo/KbddService  ru.gentoo.kbdd.set_layout "
+
+kbdmenu = awful.menu({
+    items = {
+        { "English", kbd_dbus_sw_cmd .. "0", kbd_img_path .. "us.png" },
+        { "Русский", kbd_dbus_sw_cmd .. "1", kbd_img_path .. "ru.png" },
+    }
+})
+
 kbdwidget = widget({type = "textbox", name = "kbdwidget"})
 kbdwidget.bg_image = image(kbd_img_path .. "us.png")
+kbdwidget.bg_align = "center"
+awful.widget.layout.margins[kbdwidget] = { left = 0, right = 10 }
 
+kbdwidget:buttons(awful.util.table.join(
+    awful.button({ }, 1, function() kbdmenu:toggle() end)
+))
 
 dbus.request_name("session", "ru.gentoo.kbdd")
 dbus.add_match("session", "interface='ru.gentoo.kbdd',member='layoutChanged'")
