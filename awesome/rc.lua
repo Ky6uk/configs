@@ -78,6 +78,24 @@ for s = 1, screen.count() do
 end
 -- }}}
 
+-- {{{ kbdd widget
+kbd_img_path = awful.util.getdir("config") .. "/icons/"
+
+kbdwidget = widget({type = "textbox", name = "kbdwidget"})
+kbdwidget.bg_image = image(kbd_img_path .. "us.png")
+
+
+dbus.request_name("session", "ru.gentoo.kbdd")
+dbus.add_match("session", "interface='ru.gentoo.kbdd',member='layoutChanged'")
+dbus.add_signal("ru.gentoo.kbdd", function(...)
+    local data = {...}
+    local layout = data[2]
+    lts_img = {[0] = kbd_img_path .. "us.png", [1] = kbd_img_path .. "ru.png"}
+    kbdwidget.bg_image = image(lts_img[layout])
+    end
+)
+-- }}}
+
 -- {{{ Menu
 -- Create a laucher widget and a main menu
 myawesomemenu = {
@@ -180,6 +198,7 @@ for s = 1, screen.count() do
         },
         mylayoutbox[s],
         mytextclock,
+        kbdwidget,
         s == 1 and mysystray or nil,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
@@ -386,13 +405,11 @@ function run_once(prg,arg_string,pname,screen)
     end
 end
 
-run_once("kded4") -- qdbus dependency
 run_once("kmix")
 run_once("psi-plus")
 run_once("google-chrome",nil,"/opt/google/chrome/chrome")
 run_once("tilda")
 run_once("xscreensaver","-no-splash")
-awful.util.spawn_with_shell("qdbus org.kde.kded /kded loadModule keyboard") -- libqt4-dev should me installed?
 -- }}}
 
 -- {{{ Custom keys
@@ -416,6 +433,10 @@ awful.rules.rules = {
     {
         rule = { class = "psi+" },
         properties = { tag = tags[1][2] }
+    },
+    {
+        rule = { class = "Steam" },
+        properties = { tag = tags[1][4] }
     }
 }
 -- }}}

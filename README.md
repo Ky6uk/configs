@@ -53,3 +53,9 @@ Awesome WM
 ==========
 
 config dir: ~/.config/awesome
+
+Third party
+-----------
+* kbdd
+* xscreensaver
+* ksnapshot
