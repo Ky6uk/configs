@@ -23,31 +23,26 @@ Plugins updater
 >
 > **directory** - is a optional parameter.
 
-Sublime Text 2
+Sublime Text 3
 ==============
 
-**Version for:** beta, build 2220
+**Version for:** beta, build 3047
 [Packages manager official instruction](http://wbond.net/sublime_packages/package_control/installation).
 
 Some Useful Package
 -------------------
-* Backbone.js
-* Emmet
-* jQuery
-* Theme - Soda
-* SublimeDancer
-* CSSComb
-* JsFormat
-* JS Minifier
-* LiveReload
-
+* [Theme - Soda](http://buymeasoda.github.io/soda-theme/)
+* [TernJS](https://github.com/marijnh/tern_for_sublime)
+* [Emmet](http://docs.emmet.io/)
+* [LiveStyle](http://livestyle.emmet.io/)
+* [JSHint Gutter](https://github.com/victorporof/Sublime-JSHint)
 
 Local Directory
 ---------------
 
 **Linux:**
 
-    ~/.config/sublime-text-2/
+    ~/.config/sublime-text-3/
 
 Awesome WM
 ==========
