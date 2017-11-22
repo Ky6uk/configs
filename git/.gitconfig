@@ -1,19 +1,17 @@
-[web]
-	browser = chromium-browser
-
-[color]
-	diff = always
-	branch = always
-	status = always
-
-[core]
-	compression = 9
-	editor = vim
-	quotepath = false
-
 [user]
 	name = Roman (Ky6uk) Nuritdinov
 	email = ky6uk.kun@gmail.com
-
-[merge]
-	tool = meld
+	signingKey = 348B935A
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[push]
+	default = simple
+	gpgSign = if-asked
+[commit]
+	gpgSign = true
+[rebase]
+	autosquash = true
+[core]
+	compression = 9
